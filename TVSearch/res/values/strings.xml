@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">TVSearch</string>
+
+    <string name="search_label">Search label</string>
+    <string name="search_hint">Search hint</string>
+    <string name="settings_description">Settings desc</string>
+    
+</resources>
