@@ -1,14 +1,14 @@
-package com.iwedia.tvsearch;
+package com.iwedia.tvsearch.provider;
 
 import android.net.Uri;
 
-import com.iwedia.dtv.support.search.EpgSearchEvent;
+import com.iwedia.dtv.support.search.SearchableEpgEvent;
 import com.iwedia.dtv.support.search.IDTVSearchManager;
 import com.iwedia.dtv.support.search.IEpgSearchControl;
 import com.iwedia.dtv.support.search.IPvrSearchControl;
 import com.iwedia.dtv.support.search.ITeletextSearchControl;
-import com.iwedia.dtv.support.search.PvrSearchFile;
-import com.iwedia.dtv.support.search.TeletextSearchPage;
+import com.iwedia.dtv.support.search.SearchablePvrEvent;
+import com.iwedia.dtv.support.search.SearchableTeletextPage;
 
 public class SearchProvider {
 	
@@ -25,8 +25,8 @@ public class SearchProvider {
 	public void getEpgSearchResults(String query) {
 		IEpgSearchControl epgCtl = dtvManager.getEpgSearchControl();
 
-		EpgSearchEvent events[] = epgCtl.getEventsWithText(query);
-		for (EpgSearchEvent event : events) {
+		SearchableEpgEvent events[] = epgCtl.getEventsWithText(query);
+		for (SearchableEpgEvent event : events) {
 			String title = event.getName();
 			String suggestion = event.getDescription();
 			Uri uri = event.getUri();
@@ -37,8 +37,8 @@ public class SearchProvider {
 	public void getTeletextSearchResults(String query) {
 		ITeletextSearchControl ttxCtl = dtvManager.getTeletextSearchControl();
 
-		TeletextSearchPage pages[] = ttxCtl.getPagesWithText(query);
-		for (TeletextSearchPage page : pages) {
+		SearchableTeletextPage pages[] = ttxCtl.getPagesWithText(query);
+		for (SearchableTeletextPage page : pages) {
 			String title = page.getService().getName() + " : " + page.getNumber();
 			String suggestion = page.getSearchedTextLine();
 			Uri uri = page.getUri();
@@ -49,8 +49,8 @@ public class SearchProvider {
 	public void getPvrSearchResults(String query) {
 		IPvrSearchControl pvrCtl = dtvManager.getPvrSearchControl();
 
-		PvrSearchFile files[] = pvrCtl.getEventsWithText(query);
-		for (PvrSearchFile file : files) {
+		SearchablePvrEvent files[] = pvrCtl.getEventsWithText(query);
+		for (SearchablePvrEvent file : files) {
 			String title = file.getInfo().getTitle();
 			String suggestion = file.getInfo().getDescription();
 			Uri uri = file.getUri();

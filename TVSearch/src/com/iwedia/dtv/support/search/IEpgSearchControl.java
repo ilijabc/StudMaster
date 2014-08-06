@@ -9,5 +9,5 @@ public interface IEpgSearchControl extends IEpgControl {
 	public String URI_PARAM_END_DATE = null;
 	public String URI_PARAM_SERVICE_ID = null;
 
-	public EpgSearchEvent[] getEventsWithText(String query);
+	public SearchableEpgEvent[] getEventsWithText(String query);
 }

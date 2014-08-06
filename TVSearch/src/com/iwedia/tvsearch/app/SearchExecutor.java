@@ -1,4 +1,4 @@
-package com.iwedia.tvsearch;
+package com.iwedia.tvsearch.app;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package com.iwedia.tvsearch;
+package com.iwedia.tvsearch.app;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.util.Log;
 import com.iwedia.dtv.dtvmanager.DTVManager;
 import com.iwedia.dtv.dtvmanager.IDTVManager;
 import com.iwedia.dtv.support.search.IDTVSearchManager;
+import com.iwedia.tvsearch.R;
+import com.iwedia.tvsearch.R.layout;
 
 public class MainActivity extends Activity {
 	public static final String TAG = "zzz";

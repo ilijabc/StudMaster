@@ -4,7 +4,7 @@ import android.net.Uri;
 
 import com.iwedia.dtv.pvr.PlaybackInfo;
 
-public class PvrSearchFile {
+public class SearchablePvrEvent {
 
 	public PlaybackInfo getInfo() {
 		return null;

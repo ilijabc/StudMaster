@@ -1,8 +1,8 @@
-package com.iwedia.tvsearch;
+package com.iwedia.tvsearch.provider;
 
 import com.iwedia.dtv.epg.EpgEvent;
 import com.iwedia.dtv.epg.IEpgControl;
-import com.iwedia.dtv.support.search.EpgSearchEvent;
+import com.iwedia.dtv.support.search.SearchableEpgEvent;
 import com.iwedia.dtv.support.search.IDTVSearchManager;
 import com.iwedia.dtv.support.search.IEpgSearchControl;
 import com.iwedia.dtv.support.search.implementation.DTVSearchManager;
@@ -52,15 +52,15 @@ public class DTVSearchProvider extends ContentProvider {
 		return 0;
 	}
 
-	public Cursor getEpgSearchResults(String query) {
-		IEpgSearchControl epgCtl = dtvManager.getEpgSearchControl();
-
-		EpgSearchEvent events[] = epgCtl.getEventsWithText(query);
-		for (EpgSearchEvent event : events) {
-			String title = event.getName();
-			String suggestion = event.getDescription();
-			Uri uri = event.getUri();
-			sendResultToQSB(EPG_SEARCH_RESULT, title, suggestion, uri);
-		}
-	}
+//	public Cursor getEpgSearchResults(String query) {
+//		IEpgSearchControl epgCtl = dtvManager.getEpgSearchControl();
+//
+//		SearchableEpgEvent events[] = epgCtl.getEventsWithText(query);
+//		for (SearchableEpgEvent event : events) {
+//			String title = event.getName();
+//			String suggestion = event.getDescription();
+//			Uri uri = event.getUri();
+//			sendResultToQSB(EPG_SEARCH_RESULT, title, suggestion, uri);
+//		}
+//	}
 }

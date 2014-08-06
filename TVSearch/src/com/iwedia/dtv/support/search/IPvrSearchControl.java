@@ -7,6 +7,6 @@ public interface IPvrSearchControl extends IPvrControl {
 	String URI_PARAM_FILE_INDEX = null;
 	String URI_PARAM_TIME_OFFSET = null;
 
-	public PvrSearchFile[] getEventsWithText(String query);
+	public SearchablePvrEvent[] getEventsWithText(String query);
 
 }

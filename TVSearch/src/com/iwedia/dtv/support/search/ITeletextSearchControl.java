@@ -6,6 +6,6 @@ public interface ITeletextSearchControl extends ITeletextControl {
 
 	String URI_PARAM_PAGE_NUMBER = null;
 
-	public TeletextSearchPage[] getPagesWithText(String query);
+	public SearchableTeletextPage[] getPagesWithText(String query);
 
 }

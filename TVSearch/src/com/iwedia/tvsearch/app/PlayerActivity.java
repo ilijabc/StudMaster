@@ -1,4 +1,4 @@
-package com.iwedia.tvsearch;
+package com.iwedia.tvsearch.app;
 
 import android.app.Activity;
 import android.content.Intent;

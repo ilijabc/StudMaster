@@ -4,7 +4,7 @@ import android.net.Uri;
 
 import com.iwedia.dtv.service.ServiceDescriptor;
 
-public class TeletextSearchPage {
+public class SearchableTeletextPage {
 
 	public ServiceDescriptor getService() {
 		// TODO Auto-generated method stub
